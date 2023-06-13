@@ -1,26 +1,24 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@model List<UserRoleViewModel>
+﻿@using StoreFront.UI.MVC.Models;
+@model List<RoleUserViewModel>
 @{
-    ViewData["Title"] = "Edit Users in Role";
-    var roleId = ViewData["RoleId"];
+    ViewData["Title"] = "Edit Roles for User";
+    var roleId = ViewData["UserId"];
 }
 
 <form method="post">
     <div class="card">
         <div class="card-header">
-            <h2>Add or remove users from this role</h2>
+            <h2>Add or remove roles for this user</h2>
         </div>
         <div class="card-body">
             @for (int i = 0; i < Model.Count; i++)
             {
                 <div class="form-check m-1">
-                    <input type="hidden" asp-for="@Model[i].UserId" />
-                    <input type="hidden" asp-for="@Model[i].UserName" />
+                    <input type="hidden" asp-for="@Model[i].RoleId" />
+                    <input type="hidden" asp-for="@Model[i].RoleName" />
                     <input asp-for="@Model[i].IsSelected" class="form-check-input" />
                     <label class="form-check-label" asp-for="@Model[i].IsSelected">
-                        @Model[i].UserName
+                        @Model[i].RoleName
                     </label>
                 </div>
             }
