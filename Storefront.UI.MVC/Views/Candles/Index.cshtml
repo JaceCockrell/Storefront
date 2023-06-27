@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Storefront.DATA.EF.Models.Candle>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Candles table</h2>
+                <p>
+                    <a asp-action="Create">Add New Candle</a>
+                    <span> <br /> </span>
+                    <a asp-action="TiledProducts" asp-controller="Candles">Tile View</a>
+                </p>
+            </div>
+        </div>
+
+
+
+        <h1 class="text-center">Candles Table View</h1>
+
+        <table class="tables">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CandleName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CandleImage)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Supplier)
+                    </th>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <th></th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CandleName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CandleImage)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
+                        </td>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <td>
+
+
+                                <a asp-action="Edit" asp-route-id="@item.CandleId">Edit</a> <span>|</span>
+
+                                @*<a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |*@
+
+                                @*
+                        Conditional Delete Availability
+                        - Only want to allow users to click on the delete button if the product is not directly
+                        related to any other records.
+                        -We can check the count of related records for the product. If the count is 0,
+                        allow deletion. otherwise disable the link.
+
+                        I would like to put a conditional delete to ensure the integrity of my database. It seems I ond have an 'orderitem'
+                        to check if the count == 0 is there something else i could do?
+                        *@
+
+                                @*@if (item.[*].Count() == 0)//this is html security
+                        {
+                        <a asp-action="Delete" asp-route-id="@item.CandleId">Delete</a>
+                        }
+                        else
+                        {
+                        <a disabled="true" class="text-danger" style="text-decoration: line-through;"
+                        title="Can't delete - referenced by other records.">Delete</a>
+                        }*@
+
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+@section Scripts {
+
+    <script>
+        let table = new DataTable('.tables');
+    </script>
+}

@@ -3,275 +3,64 @@
 }
 
 
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Candles table</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+<section class="ftco-section">
+    @*-- Need to figure out how to constuct this section to either have the image on the left with welcome text on right
+    /completed-ish
+    **-- need to now fix the images to look correct in place --**
+
+    ***might need extra review on the steps to implement the img converter to update the DB with the right images
+
+    ****Need to configure session and implement it in program.cs and add shopping cart funtionality
+
+    **Need to style Views: Products (Index, TiledProducts, Details, Create, Edit, and Delete)--take precedence
+    *@
+    <div class="row">
+        <div class="col-4">
+            <img src="~/images/bg-candle2.jpg" class="img-fluid" align="center" alt="">
+        </div>
+        <div class="col-4">
+            <img src="~/images/candlebackground.jpg" class="img-fluid" align="center" alt="">
+        </div>
+        <div class="col-4">
+            <img src="~/images/bg-candle3.jpg" class="img-fluid" align="center" alt="">
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="px-5 text-center m-5">
+                    Welcome to Candle Cove, your ultimate destination for exquisite candles that ignite your senses and illuminate your spaces. Step into a world of enchanting fragrances, captivating designs, and unparalleled craftsmanship. Immerse yourself in the warm glow and soothing scents that transform any environment into a haven of tranquility and serenity. From the flickering flame that dances with elegance to the carefully curated aromas that evoke blissful memories, our collection of candles is thoughtfully handcrafted to elevate your everyday moments. Whether you seek a cozy ambiance for a relaxing evening or a delightful gift to brighten someone's day, Candle Cove is here to accompany you on your candle journey. Experience the artistry and magic of candles that transcend the ordinary and create an extraordinary atmosphere. We invite you to explore our captivating selection and embark on a sensory adventure that will illuminate your soul. Welcome to Candle Cove, where light meets inspiration.
+                </p>
             </div>
         </div>
     </div>
+</section>
+
+
+<section class="ftco-section ftco-deal bg-info mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product d-flex flex-column">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-1.png" alt="Colorlib Template">
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
+            <div class="col-md-6">
+                <img src="~/images/vanilla.jpg" class="img-fluid" alt="vanilla candle">
+            </div>
+            <div class="col-md-6">
+                <div class="heading-section heading-section-white">
+                    <span class="subheading">Check this out!</span>
+                    <h2 class="mb-3">Best Seller:</h2>
+                </div>
+                <div class="text-deal">
+                    <h2><a asp-action="Details" asp-route-id="">Vannila Delight</a></h2>
+                    <p class="price"></p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product d-flex flex-column">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-2.png" alt="Colorlib Template">
-                        <span class="status">50% Off</span>
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-3.png" alt="Colorlib Template">
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-4.png" alt="Colorlib Template">
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
+</section>
 
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product d-flex flex-column">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-5.png" alt="Colorlib Template">
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product d-flex flex-column">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-6.png" alt="Colorlib Template">
-                        <span class="status">50% Off</span>
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-7.png" alt="Colorlib Template">
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-                <div class="product">
-                    <a href="#" class="img-prod">
-                        <img class="img-fluid" src="~/images/product-8.png" alt="Colorlib Template">
-                        <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3">
-                        <div class="d-flex">
-                            <div class="cat">
-                                <span>Lifestyle</span>
-                            </div>
-                            <div class="rating">
-                                <p class="text-right mb-0">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                        <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                        </p>
-                    </div>
-                </div>
+<section class="ftco-gallery">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
+                <h2 class="mb-4">Thanks for choosing Candle Cove!</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
             </div>
         </div>
     </div>
@@ -287,7 +76,9 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Free Shipping</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p>
+                            Experience the joy of free shipping on every order at Candle Cove. Shop with ease and let us deliver the enchantment of our exquisite candles to your door, no extra cost required.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -298,7 +89,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Support Customer</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p>Our dedicated customer support team at Candle Cove is here to assist you every step of the way. From product inquiries to order assistance, we are committed to providing prompt and personalized support to ensure your complete satisfaction. Please fill out the contact form for any assistance.</p>
                     </div>
                 </div>
             </div>
@@ -309,51 +100,9 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Secure Payments</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p>Shop with confidence at Candle Cove knowing that we prioritize your security. We employ industry-leading encryption technology to safeguard your payment information, ensuring a safe and secure shopping experience.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section ftco-deal bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="~/images/prod-1.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-md-6">
-                <div class="heading-section heading-section-white">
-                    <span class="subheading">Deal of the month</span>
-                    <h2 class="mb-3">Deal of the month</h2>
-                </div>
-                <div id="timer" class="d-flex mb-4">
-                    <div class="time" id="days"></div>
-                    <div class="time pl-4" id="hours"></div>
-                    <div class="time pl-4" id="minutes"></div>
-                    <div class="time pl-4" id="seconds"></div>
-                </div>
-                <div class="text-deal">
-                    <h2><a href="#">Nike Free RN 2019 iD</a></h2>
-                    <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
-                    <ul class="thumb-deal d-flex mt-4">
-                        <li class="img" style="background-image: url(~/images/product-6.png);"></li>
-                        <li class="img" style="background-image: url(~/images/product-2.png);"></li>
-                        <li class="img" style="background-image: url(~/images/product-4.png);"></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-gallery">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
-                <h2 class="mb-4">Thanks for choosing StoreFront Candles!</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
             </div>
         </div>
     </div>
