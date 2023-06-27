@@ -25,7 +25,7 @@ namespace Storefront.DATA.EF.Models//.Metadata
         public string? Description { get; set; }
 
         [Required(ErrorMessage = "*Price is required")]
-        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = false)]
         [Range(0, (double)decimal.MaxValue)]
         public decimal Price { get; set; }
 
